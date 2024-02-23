@@ -1,3 +1,5 @@
+/*Простите мою невнимательность, спасибо вам огромное за помощь!*/
+
 *,
 *::before,
 *::after {
@@ -9,8 +11,9 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   margin: auto;
-  padding: 133px 30px;
   color: #fff;
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
@@ -71,10 +74,10 @@ ol {
 }
 
 .result__video {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .search-form {
@@ -115,12 +118,13 @@ ol {
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   background-color: transparent;
   min-inline-size: 225px;
   min-block-size: 27px;
   appearance: none;
+  cursor: pointer;
 }
 
 .search-form__textfield:hover {
@@ -153,18 +157,18 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 19px;
-  height: 19px;
   margin-right: 5px;
   border: 1px solid #fff;
+  inline-size: 19px;
+  block-size: 19px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
   display: block;
-  width: 15px;
-  height: 15px;
   background-color: #fff;
+  inline-size: 15px;
+  block-size: 15px;
 }
 
 .button {
@@ -259,7 +263,6 @@ ol {
 }
 
 .content__video-card-title {
-  margin-bottom: 6px;
   font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
