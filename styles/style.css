@@ -10,8 +10,9 @@ html {
 
 .page {
   margin: auto;
+  padding: 133px 30px;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
@@ -54,7 +55,6 @@ ol {
   align-content: center;
   gap: 30px;
   height: 100vh;
-  padding: 133px 30px;
 }
 
 .result {
@@ -65,9 +65,9 @@ ol {
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  height: 386px;
   margin-bottom: 16px;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .result__video {
@@ -102,7 +102,8 @@ ol {
   width: 100%;
 }
 
-.search-form__label:has(+ input:focus-visible) {
+/* Валидатор не принимает данное решение, пытался найти решение, чтобы не жаловался, поэтому применял (.search-form__label:has(+ input:focus-visible) */
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff; 
   outline-offset: 1px;
 }
@@ -113,13 +114,17 @@ ol {
   border-inline-end: 1px solid transparent;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: transparent;
   min-inline-size: 225px;
   min-block-size: 27px;
   appearance: none;
+}
+
+.search-form__textfield:hover {
+  cursor: text;
 }
 
 .search-form__textfield:focus-visible {
@@ -170,8 +175,9 @@ ol {
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
-  background-color: inherit;
+  background-color: transparent;
   cursor: pointer;
+  appearance: none;
 }
 
 .button:active {
@@ -262,7 +268,10 @@ ol {
 }
 
 .content__video-card-description-container {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
 }
 
 .content__video-card-description {
@@ -273,15 +282,15 @@ ol {
   width: 194px;
   height: 104px;
   object-fit: cover;
+  object-position: center;
 }
 
-.content__card-link_current,
-.content__card-link:active {
+.content__card-link_current {
   background-color: #545050;
 }
 
-.content__card-link:hover {
-  text-decoration: underline;
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link:focus {
@@ -290,4 +299,8 @@ ol {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
 }
