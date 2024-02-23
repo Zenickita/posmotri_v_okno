@@ -40,7 +40,7 @@ ol {
 .visually-hidden {
   position: absolute;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   inline-size: 1px;
   block-size: 1px;
   clip-path: inset(50%);
@@ -102,7 +102,7 @@ ol {
   width: 100%;
 }
 
-.search-form__label:has(:focus-visible) {
+.search-form__label:has(+ input:focus-visible) {
   outline: 1px solid #fff; 
   outline-offset: 1px;
 }
@@ -228,7 +228,7 @@ ol {
   width: 5px;
 }
 .content__list::-webkit-scrollbar-track {
-  background-color: none;
+  background-color: transparent;
 }
 .content__list::-webkit-scrollbar-thumb {
   background-color: #545050;
