@@ -12,6 +12,7 @@ html {
 
 .page {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: auto;
   color: #fff;
@@ -58,6 +59,7 @@ ol {
   align-content: center;
   gap: 30px;
   height: 100vh;
+  margin: auto;
 }
 
 .result {
@@ -121,10 +123,10 @@ ol {
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   background-color: transparent;
+  cursor: pointer;
   min-inline-size: 225px;
   min-block-size: 27px;
   appearance: none;
-  cursor: pointer;
 }
 
 .search-form__textfield:hover {
